@@ -2,16 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Manrope;
+  src: url(./assets/fonts/Manrope-VariableFont_wght.ttf);
+}
+
 :root {
   --light-cyan: hsl(193, 38%, 86%);
   --neon-green: hsl(150, 100%, 66%);
   --grayish-blue: hsl(217, 19%, 38%);
-  --dark-grayisgh-blue: hsl(217, 19%, 24%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
   --dark-blue: hsl(218, 23%, 16%);
+}
+
+html,body {
+  height: 100%;
 }
 
 body {
   background-color: var(--dark-blue);
-  color: white;
-  height: 100%;
+  color: var(--light-cyan);
+  font-family: Manrope, serif;
+}
+
+.dark-grayish-blue-bg {
+  background-color: var(--dark-grayish-blue);
+}
+
+.neon-green-text {
+  color: var(--neon-green);
+}
+
+.function-button {
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  padding: 1rem;
+  position: relative;
+  bottom: -1.5rem;
+}
+
+.function-button:hover {
+  box-shadow: 0 0 1rem var(--neon-green);
+}
+
+.larger-letter-spacing {
+  letter-spacing: 0.3rem;
 }
