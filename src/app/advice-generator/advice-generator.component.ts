@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
+import {AdviceGeneratorService} from "../service/advice-generator.service";
 
 @Component({
   selector: 'app-advice-generator',
@@ -12,4 +13,16 @@ import {NgOptimizedImage} from "@angular/common";
 })
 export class AdviceGeneratorComponent {
 
+  advice = this.adviceGeneratorService.advice;
+
+  constructor(private adviceGeneratorService: AdviceGeneratorService) {
+  }
+
+  ngOnInit() {
+    this.generateAdvice();
+  }
+
+  generateAdvice() {
+    this.adviceGeneratorService.generateAdvice();
+  }
 }

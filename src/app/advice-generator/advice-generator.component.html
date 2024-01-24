@@ -1,15 +1,16 @@
 <div class="dark-grayish-blue-bg rounded-xl px-10 pt-10 text-center">
-  <p class="neon-green-text larger-letter-spacing text-sm mb-6">ADVICE #117</p>
 
-  <p class="font-bold mb-6 text-xl">"It is easy to sit up and take notice, what's difficult is getting up and taking
-    action."</p>
+  <p class="neon-green-text larger-letter-spacing text-sm mb-6">ADVICE #{{ advice()?.id }}</p>
+
+  <p class="font-bold mb-6 text-xl">{{ advice()?.advice }}</p>
 
   <picture>
     <source srcset="assets/images/pattern-divider-desktop.svg" media="(min-width: 640px)">
     <img class="mx-auto" src="assets/images/pattern-divider-mobile.svg" alt="divider">
   </picture>
 
-  <button class="function-button"><img ngSrc="assets/images/icon-dice.svg" height="24" width="24" alt="dice icon">
+  <button class="function-button" (click)="generateAdvice()">
+    <img ngSrc="assets/images/icon-dice.svg" height="24" width="24" alt="dice icon">
   </button>
 </div>
 
