@@ -2,6 +2,8 @@
 
 Challange by Frontend Mentor: https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db
 
+Live url: https://advice-generator-app-angular.vercel.app/
+
 ## Build
 Run `ng build` to build the application.
 
